@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book An Appointment</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+    .bg-image {
+        background-image: url('https://lanotte.codelayers.net/images/booking-page.jpg');
+        background-size: cover;
+        /* background-position: center; */
+        padding: 60px 0;
+        color: white;
+        position: relative;
+    }
+
+    .bg-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and transparency */
+        z-index: 1;
+    }
+
+    .bg-image .text-center {
+        position: relative;
+        z-index: 2;
+    }
+
+    .breadcrumb {
+        background-color: transparent; /* Remove the default background */
+        padding: 0; /* Remove padding */
+        margin-bottom: 0; /* Adjust margin if needed */
+    }
+
+    .breadcrumb-item a {
+        color: white;
+    }
+
+    .breadcrumb-item.active {
+        color: white;
+    }
+    .services-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+
+  .service-item {
+    margin-bottom: 30px;
+  }
+
+  .service-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .service-item h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .service-item p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .service-item a {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .service-item a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+  }
+
+  .service-item a:hover::after {
+    width: 100%;
+  }
+  .bg-light {
+        background-color: #f8f9fa;
+    }
+
+    .btn-primary {
+        background-color: #ff4081; /* Adjust the button color */
+        border-color: #ff4081;
+    }
+
+    .btn-primary:hover {
+        background-color: #e63770;
+        border-color: #e63770;
+    }
+    .btn-pink {
+        background-color: #ff4081;
+        color: white;
+        border: none;
+    }
+
+    .btn-pink:hover {
+        background-color: transparent; /* Light grey background for contrast */
+color:#000 !important; /* Keep the color consistent and visible */
+border: 1px solid #000;
+    }
+    .text-overlay {
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        /* text-align: center; */
+        color:black;
+    }
+    .foot a{
+        color: #e63770;
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div   class="container-fluid bg-image">
+        <div class="text-center my-5">
+            <h1 class="display-4 text-white">Book An Appointment</h1>
+            <nav aria-label="breadcrumb ">
+                <ol class="breadcrumb justify-content-center pt-3">
+                    <li class="breadcrumb-item"><a href="Home.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Booking Page</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <section class="services-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 service-item">
+              <img src="care.png" alt="Nail Care Icon">
+              <h5>Nail Care</h5>
+              <p>"Our premium nail care services include trimming, shaping, and nourishing your nails for healthy growth and impeccable hygiene."</p>
+              <a href="#">Find Out More</a>
+            </div>
+            <div class="col-md-4 service-item">
+              <img src="nail-polish.png" alt="Nail Art Icon">
+              <h5>Nail Art</h5>
+              <p>"Transform your nails into a stunning work of art with intricate designs, vibrant colors,  nourishing your nails and professional-grade polish applications."
+              </p>
+              <a href="#" >Find Out More</a>
+            </div>
+            <div class="col-md-4 service-item">
+              <img src="soak.png" alt="Add-Ons Icon">
+              <h5>Add-Ons</h5>
+              <p>"Enhance your nail care experience with luxury add-ons such as paraffin treatments, gel polish upgrades, rejuvenating soaks, and soothing massages."
+              </p>
+              <a href="#" >Find Out More</a>
+            </div>
+                  </div>
+        </div>
+      </section>
+      <div class="container my-5 ">
+        <div class="row align-items-center">
+            <!-- Image Section -->
+            <div class="col-md-6">
+                <img src="https://lanotte.codelayers.net/images/booking-1.jpg" class="img-fluid" alt="Appointment Image">
+            </div>
+    
+            <!-- Form Section -->
+            <div class="col-md-6 ">
+                <div class="p-5 bg-light">
+                    <h6 class="text-uppercase">Booking Now</h6>
+                    <h2 class="mb-4">Make An Appointment</h2>
+                    <form method="post" action="booking.php">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" name="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-control" name="service">
+                                    <option selected disabled>Select Service</option>
+                                    <option>Service 1</option>
+                                    <option>Service 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <select class="form-control" name="staff">
+                                    <option selected disabled>Select Staff</option>
+                                    <option>Staff 1</option>
+                                    <option>Staff 2</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <input type="date" class="form-control" name="date" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid ">
+        <div class="container">
+            <div class="row">
+                <!-- Image Section -->
+                <div class="col-md-12 position-relative">
+                    <img src="https://lanotte.codelayers.net/images/banner-5.jpg" class="" width="100%" height="80%"  alt="Beauty Image">
+                    <!-- Text Section -->
+                    <div class="text-overlay">
+                        <h6 class="text-uppercase text-muted">Elegance In Every Stroke</h6>
+                        <h2 class="display-4">Get the nails you've <br> been dreaming of...</h2>
+                        <a href="#" class="btn btn-pink mt-4">Booking Online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Footer Section -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <!-- Location -->
+                <div class="col-md-3">
+                    <h5 class="mb-3">Location</h5>
+                    <p class="mb-0">La Notte Studio</p>
+                    <p class="mb-0">Los Angeles, 8721 M Central Avenue, CA 9003</p>
+                </div>
+                <div class="col-1"></div>
+    
+                <!-- Contacts -->
+                <div class="col-md-3">
+                    <h5 class="mb-3">Contacts</h5>
+                    <p class="mb-0">ph: +12 9 8765 4321</p>
+                    <a href="mailto:hello@yourdomain.com" class="d-block mb-3" style="color: #e63770;">hello@yourdomain.com</a>
+                    <div>
+                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-vimeo"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Opening Hours -->
+                <div class="col-md-4">
+                    <h5 class="mb-3">Opening Hours</h5>
+                    <p class="mb-0">Mon-Fri: 10:00AM - 9:00PM</p>
+                    <p class="mb-0">Saturday: 10:00AM - 7:00PM</p>
+                    <p class="mb-0">Sunday: 10:00PM - 7:00PM</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="container-fluid bg-light py-3">
+        <div class="container text-center foot">
+            <p class="mb-0">&copy; 2014 - 2023 <a href="#" class="text-decoration-none">LANOTTE JOOMLA</a>. All Rights Reserved by <a href="#" class="text-decoration-none">CODELAYERS</a>.</p>
+            <p class="mb-0"><a href="#" class="text-decoration-none me-2">Privacy Policy</a>|<a href="#" class="text-decoration-none ms-2">Terms & Conditions</a></p>
+        </div>
+    </div>
+    
+    
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
